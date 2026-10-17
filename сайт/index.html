@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЭлектроМастер — электромонтаж под ключ</title>
+  <meta name="description" content="Проектируем, монтируем и обслуживаем электроустановки для квартир, домов и офисов. Гарантия 5 лет.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================= ШАПКА ========================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="logo" href="#hero">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28"><path d="M18 2 8 18h7l-1 12 10-16h-7z" fill="currentColor"/></svg>
+        </span>
+        <span class="logo-text">ЭлектроМастер</span>
+      </a>
+
+      <nav class="nav-links" id="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#about">О нас</a>
+        <a href="#process">Процесс</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <a class="btn btn-accent btn-phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+
+      <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <span class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Электромонтаж под ключ • Москва и область
+          </span>
+
+          <h1>Надёжная электрика, которая <span class="accent">работает</span> <span class="grad">годами</span></h1>
+
+          <p class="lead">
+            Проектируем, монтируем и обслуживаем электроустановки
+            для квартир, домов и офисов. Чистый монтаж, прозрачная
+            смета и гарантия 5 лет на все работы.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#contact">Получить расчёт</a>
+            <a class="btn btn-ghost" href="#portfolio">Смотреть работы</a>
+          </div>
+
+          <dl class="hero-stats">
+            <div class="stat"><dt>8+</dt><dd>лет опыта</dd></div>
+            <div class="stat"><dt>1200+</dt><dd>объектов</dd></div>
+            <div class="stat"><dt>99.8%</dt><dd>сдано в срок</dd></div>
+            <div class="stat"><dt>5 лет</dt><dd>гарантия</dd></div>
+          </dl>
+        </div>
+
+        <figure class="hero-media">
+          
+               <img src="images/photo_2026-10-14_16-50-26.jpg" alt="Фирменный знак ЭлектроМастер"> 
+          
+        </figure>
+      </div>
+
+      <a class="scroll-cue" href="#services" aria-label="Прокрутить вниз">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
